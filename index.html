@@ -17,28 +17,18 @@
     <header>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/UEFA_Euro_2020_logo.svg/640px-UEFA_Euro_2020_logo.svg.png" alt="logo euro 2020">
 
-        <h1>Stadi in cui si giocano gli europei 20/21</h1>
+        <h1>Alcuni degli stadi in cui si giocano gli europei 20/21</h1>
     </header>
 
     <main>
         <div id="app">
             <div class="gallery">
-                <i class="fas fa-chevron-left"></i>
-                <img src="https://i.pinimg.com/originals/29/de/14/29de14bab319fa5fe9c62241003e14d2.png" alt="stadio olimpico Roma">
-                <i class="fas fa-chevron-right"></i>
+                <i class="fas fa-chevron-left" @click="indietro"></i>
+                <img :src="foto[contatore]" alt="stadi euro 20/21">
+                <i class="fas fa-chevron-right" @click="avanti"></i>
             </div>
             <nav>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
+                <i :class="index == contatore ? 'active' : '' " class="fas fa-circle" v-for="(punti,index) in foto.length" @click="fotoaclick(index)"></i>
             </nav>
         </div>
     </main>
