@@ -15,15 +15,23 @@ const app = new Vue(
                 'https://stody0yci3-flywheel.netdna-ssl.com/wp-content/uploads/edd/2019/06/euro-09-02.jpg',
             ]
         },
+        mounted: function(){
+            this.autoplay();
+        },
         methods:{
             avanti(){
                 this.contatore == this.foto.length - 1 ? this.contatore = 0 : this.contatore++;
             },
             indietro(){
-                this.contatore == 0 ? this.contatore.length : this.contatore--;
+                this.contatore == 0 ? this.contatore = this.foto.length - 1 : this.contatore--;
             },
             fotoaclick(index){
                 this.contatore = index;
+            },
+            autoplay(){
+                setInterval(function(){
+                    app.avanti();
+                }, 3000)
             }
         }
     }
