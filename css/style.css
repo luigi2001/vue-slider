@@ -1,1 +1,55 @@
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+    padding: 40px;
+}
+
+header > img{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery i{
+    font-size: 20px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.gallery > img{
+    min-width: 50%;
+}
+
+#app{
+    position: relative;
+}
+
+nav{
+    position: absolute;
+    top: 95%;
+    right: 30%;
+    color: white;
+}
+
+
+
+
+
+
+
